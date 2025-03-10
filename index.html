@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Eldar Hasanli">
+    <title>Technical Documentation Page</title> 
+    <link rel="stylesheet" href="styles.css">   
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>CSS Documentation</header>
+      <ul>
+        <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+        <li><a href="#What_you_should_already_know" class="nav-link">What you should already know</a></li>
+        <li><a href="#CSS_and_HTML" class="nav-link">CSS and HTML</a></li>
+        <li><a href="#Hello_World" class="nav-link">Hello World</a></li>
+        <li><a href="#Selectors" class="nav-link">Selectors</a></li>
+        <li><a href="#Box_Model" class="nav-link">Box Model</a></li>
+        <li><a href="#Positioning" class="nav-link">Positioning</a></li>
+        <li><a href="#Flexbox_and_Grid" class="nav-link">Flexbox and Grid</a></li>
+        <li><a href="#Colors_and_Fonts" class="nav-link">Colors and Fonts</a></li>
+        <li><a href="#Responsive_Design" class="nav-link">Responsive Design</a></li>
+        <li><a href="#Animations" class="nav-link">Animations</a></li>
+        <li><a href="#Conclusion" class="nav-link">Conclusion</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>CSS (Cascading Style Sheets) is a stylesheet language used to control the presentation and layout of web pages. It allows developers to separate content from design, making web pages more visually appealing and easier to maintain. CSS can be applied directly to HTML elements, included within HTML documents, or linked externally.</p>
+        </article>
+      </section>
+      <section class="main-section" id="What_you_should_already_know">
+        <header>What you should already know</header>
+        <article>
+          <p>This guide assumes you have the following basic background:</p>
+          <ul>
+            <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+            <li>A solid understanding of HyperText Markup Language (HTML), including its structure and semantics.</li>
+            <li>Some familiarity with web development concepts.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="CSS_and_HTML">
+        <header>CSS and HTML</header>
+        <article>
+          <p>CSS works alongside HTML to define the appearance of web elements. While HTML provides the structure of a webpage, CSS dictates how those elements should be styled, including colors, fonts, spacing, and positioning.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Hello_World">
+        <header>Hello World</header>
+        <article>
+          <p>To get started with CSS, you can create a simple stylesheet and apply it to an HTML document.</p>
+          <p><strong>Example:</strong></p>
+          <pre>
+            <code class="code-block">
+              !DOCTYPE html
+              html lang="en"
+              head
+                meta charset="UTF-8"
+                meta name="viewport" content="width=device-width, initial-scale=1.0"
+                title Hello World CSS /title
+                style
+                  body {
+                    background-color: lightblue;
+                    font-family: Arial, sans-serif;
+                  }
+                /style
+              /head
+              body
+                h1 Hello, World! /h1
+              /body
+              /html
+            </code>
+          </pre>
+        </article>
+      </section>
+      <section class="main-section" id="Selectors">
+        <header>Selectors</header>
+        <article>
+          <p>CSS selectors define which elements to style. Some common types include:</p>
+          <ul>
+            <li><strong>Element Selector:</strong> Targets all elements of a specific type (e.g., <code>p { color: blue; }</code>).</li>
+            <li><strong>Class Selector (.):</strong> Targets elements with a specified class (e.g., <code>.box { border: 1px solid black; }</code>).</li>
+            <li><strong>ID Selector (#):</strong> Targets an element with a unique ID (e.g., <code>#header { font-size: 24px; }</code>).</li>
+            <li><strong>Attribute Selector:</strong> Targets elements based on attributes (e.g., <code>[type="text"] { background-color: yellow; }</code>).</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Box_Model">
+        <header>Box Model</header>
+        <article>
+          <p>CSS uses the box model to represent elements. It consists of:</p>
+          <ul>
+            <li><strong>Content:</strong> The actual text or image within the element.</li>
+            <li><strong>Padding:</strong> Space around the content.</li>
+            <li><strong>Border:</strong> A surrounding border.</li>
+            <li><strong>Margin:</strong> Space between the element and others.</li>
+          </ul>
+          <p><strong>Example:</strong></p>
+          <pre>
+            <code class="code-block">
+              div {
+                width: 200px;
+                padding: 20px;
+                border: 5px solid black;
+                margin: 10px;
+              }
+            </code>
+          </pre>
+        </article>
+      </section>
+      <section class="main-section" id="Positioning">
+        <header>Positioning</header>
+        <article>
+          <p>CSS provides various ways to position elements:</p>
+          <ul>
+            <li><strong>Static (default):</strong> Elements appear in the normal document flow.</li>
+            <li><strong>Relative:</strong> Positioned relative to their normal position.</li>
+            <li><strong>Absolute:</strong> Positioned relative to the nearest positioned ancestor.</li>
+            <li><strong>Fixed:</strong> Positioned relative to the viewport and does not move when scrolling.</li>
+            <li><strong>Sticky:</strong> Switches between relative and fixed depending on scroll position.</li>
+          </ul>
+          <p><strong>Example:</strong></p>
+          <pre>
+            <code class="code-block">
+              .fixed-box {
+                position: fixed;
+                top: 0;
+                right: 0;
+                background-color: red;
+              }
+            </code>
+          </pre>
+        </article>
+      </section>
+      <section class="main-section" id="Flexbox_and_Grid">
+        <header>Flexbox and Grid</header>
+        <article>
+          <p>Modern CSS layout techniques include:</p>
+          <ul>
+            <li><strong>Flexbox:</strong> A one-dimensional layout system for aligning items along a row or column.</li>
+            <li><strong>Grid:</strong> A two-dimensional layout system for creating complex layouts.</li>
+          </ul>
+          <p><strong>Example (Flexbox):</strong></p>
+          <pre>
+            <code class="code-block">
+              .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            </code>
+          </pre>
+          <p><strong>Example (Grid):</strong></p>
+          <pre>
+            <code class="code-block">
+              .grid-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+              }
+            </code>
+          </pre>
+        </article>
+      </section>
+      <section class="main-section" id="Colors_and_Fonts">
+        <header>Colors and Fonts</header>
+        <article>
+          <p>CSS allows you to customize colors and fonts using properties like <code>color</code>, <code>background-color</code>, <code>font-family</code>, and <code>font-size</code>.</p>
+          <p><strong>Example:</strong></p>
+          <pre>
+            <code class="code-block">
+              body {
+                color: #333;
+                background-color: #f5f5f5;
+                font-family: 'Arial', sans-serif;
+              }
+            </code>
+          </pre>
+        </article>
+      </section>
+      <section class="main-section" id="Responsive_Design">
+        <header>Responsive Design</header>
+        <article>
+          <p>CSS makes it easy to create responsive designs using media queries.</p>
+          <p><strong>Example:</strong></p>
+          <pre>
+            <code class="code-block">
+              @media (max-width: 600px) {
+                body {
+                  background-color: lightgray;
+                }
+              }
+            </code>
+          </pre>
+        </article>
+      </section>
+      <section class="main-section" id="Animations">
+        <header>Animations</header>
+        <article>
+          <p>CSS supports animations and transitions for smooth effects.</p>
+          <p><strong>Example:</strong></p>
+          <pre>
+            <code class="code-block">
+              .box {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                transition: background-color 0.5s ease-in-out;
+              }
+
+              .box:hover {
+                background-color: red;
+              }
+            </code>
+          </pre>
+        </article>
+      </section>
+      <section class="main-section" id="Conclusion">
+        <header>Conclusion</header>
+        <article>
+          <p>CSS is a powerful tool for styling web pages. By understanding selectors, layout techniques, and responsive design, you can create visually appealing websites that work across different devices.</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
